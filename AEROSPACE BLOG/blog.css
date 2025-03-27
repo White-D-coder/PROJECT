@@ -36,7 +36,7 @@ body {
     position: absolute;
     width: 2px;
     height: 100px;
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background:linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
     animation: shootingStar 2s linear infinite;
     opacity: 0;
 }
@@ -52,7 +52,7 @@ body {
 
 @keyframes starMove {
     0% {
-        transform: translateY(100vh);
+        transform: translateY(80vh);
     }
     100% {
         transform: translateY(0vh);
@@ -260,4 +260,30 @@ body::after {
 
 .get-tickets:hover {
     background: #008c9e;
+}
+.content .side-content {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 300px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+.content .side-content h2 {
+    font-family: 'ICA Rubrik';
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.content .side-content p {
+    font-family: 'Poppins';
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.content .side-content ul {
+    list-style: none;
+    padding: 0;
 }
