@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
     />
-    <link rel="stylesheet" href="blog.js" />
+    <link rel="canonical" href="series.html" />
   </head>
   <style>
     * {
@@ -19,7 +19,9 @@
     }
     body {
       background-color: #d2d2d2;
-      background-image: repeating-linear-gradient(
+      background-image: url(images/light.jpg);
+      background-repeat: cover;
+      /* background-image: repeating-linear-gradient(
           to right,
           transparent 0 100px,
           #25283b22 100px 101px
@@ -28,7 +30,7 @@
           to bottom,
           transparent 0 100px,
           #25283b22 100px 101px
-        );
+        ); */
     }
 
     body::before {
@@ -39,7 +41,7 @@
       height: 90%;
       transform: translateX(-50%);
       content: "";
-      background-image: url(images/bg.png);
+      background-image: url(images/light.jpg);
       background-size: 100%;
       background-repeat: no-repeat;
       background-position: top center;
@@ -57,7 +59,7 @@
                 <li><a href="#episodes">Episodes</a></li>
             </ul>
         </nav>
-        <!-- <button class="get-tickets">Get Tickets</button> -->
+        <button class="get-tickets">Get Tickets</button> 
     </header>
     
 </div>
