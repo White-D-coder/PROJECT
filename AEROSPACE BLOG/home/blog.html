@@ -49,21 +49,53 @@
     }
   </style>
   <body>
-    <header class="navbar">
-        <div class="logo">SPACE</div>
-        <div>
-        </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="series/series.html">Series</a></li>
-                <li><a href="Characters/char.html">Characters</a></li>
-                <li><a href="#episodes">Episodes</a></li>
-            </ul>
-        </nav>
-        <button class="get-tickets">Get Tickets</button> 
+    <header class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
+      <div class="logo" style="flex: 1; text-align: left;">SPACE</div>
+      <nav class="navbar" style="flex: 1; text-align: center;"></nav>
+        <ul style="display: inline-flex; list-style: none; gap: 20px; padding: 0; margin: 0;">
+          <li><a href="#home">Home</a></li>
+          <li><a href="home/series/series.html">Series</a></li>
+          <li><a href="characters/char.html">Characters</a></li>
+          <li><a href="#episodes">Episodes</a></li>
+        </ul>
+      </nav>
+      <div style="flex: 1; text-align: right;">
+        <button class="get-tickets">Get Tickets</button>
+      </div>
+    </header>
+        <style>
+
+          .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+          }
+
+          .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+          }
+
+          .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+          }
+
+          .navbar ul li a:hover {
+            color: #ff9800;
+          }
+        </style>
     </header>
 </div>
-<main class="hero-section">
+<audio src="images/finalcall.mp3" autoplay loop></audio>
+<script>
+  const audio = document.querySelector('audio');
+  audio.volume = 0.7;
+</script>
+<main class="hero-section"></main>
 <div class="banner">
     <div class="slider" style="--quantity: 10">
         <div class="item" style="--position: 1">
