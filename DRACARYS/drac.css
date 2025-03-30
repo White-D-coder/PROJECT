@@ -82,3 +82,12 @@ nav ul li.active{
     font-size: xxx-large;
     font-weight: bold;
 }
+.robot{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
