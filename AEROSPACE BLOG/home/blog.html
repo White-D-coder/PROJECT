@@ -10,196 +10,249 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
     />
     <link rel="canonical" href="../series/series.html" />
-    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: linear-gradient(170deg, #000000 0%, #404042 100%);
+        /* background-image: url(images/download.jpeg); */
+        background-size:cover;
+        background-repeat: no-repeat;
+      }
+      body::before {
+        position: absolute;
+        width: min(1400px, 90vw);
+        top: 10%;
+        left: 50%;
+        height: 100%;
+        transform: translateX(-50%);
+        content: "";
+        /* background-color: #000000; */
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        pointer-events: none;
+      }
+      .navbar .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+      }
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+      .navbar ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      .navbar ul li a:hover {
+        color: #ff9800;
+      }
+    </style>
   </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background-color: #d2d2d2;
-      background-image: url(images/light.jpg);
-      background-repeat: cover;
-      /* background-image: repeating-linear-gradient(
-          to right,
-          transparent 0 100px,
-          #25283b22 100px 101px
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          transparent 0 100px,
-          #25283b22 100px 101px
-        ); */
-    }
-
-    body::before {
-      position: absolute;
-      width: min(1400px, 90vw);
-      top: 10%;
-      left: 50%;
-      height: 90%;
-      transform: translateX(-50%);
-      content: "";
-      background-image:#000000;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: top center;
-      pointer-events: none;
-    }
-  </style>
   <body>
-    <header class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
-      <div class="logo" style="flex: 1; text-align: left;">SPACE</div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="./series.html">Blog</a></li>
-        <li><a href="Characters/char.html">Characters</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      </nav>
-      <div style="flex: 1; text-align: right;">
-        <button class="get-tickets">Get Tickets</button>
+    <header id="site-header"></header>
+    <script>
+      // Dynamically load header.html into the #site-header element
+      fetch('./header.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('site-header').innerHTML = html;
+      })
+      .catch(err => {
+        document.getElementById('site-header').innerHTML = '<nav class="navbar"><span class="logo">Aerospace Blog</span></nav>';
+      });
+    </script>
+    <main style="margin-top: 90px; margin-bottom: 10px;">
+      <div class="main-container">
+        <div class="banner">
+          <div class="slider" style="--quantity: 10">
+            <div class="item" style="--position: 1">
+              <img src="images/ii.jpeg" alt="" />
+            </div>
+            <div class="item" style="--position: 2">
+              <img src="images/we.jpeg" alt="" />
+            </div>
+            <div class="item" style="--position: 3">
+              <img src="images/k.jpeg" alt="" />
+            </div>
+            <div class="item" style="--position: 4">
+              <img src="images/mountain.jpeg" alt="" />
+            </div>
+            <div class="item" style="--position: 5">
+              <img src="images/we.jpeg" alt="" />
+            </div>
+            <div class="item" style="--position: 6">
+              <img src="images/ss.jpg" alt="" />
+            </div>
+            <div class="item" style="--position: 7">
+              <img src="images/space.jpg" alt="" />
+            </div>
+            <div class="item" style="--position: 8">
+              <img src="images/sate.jpg" alt="" />
+            </div>
+            <div class="item" style="--position: 9">
+              <img src="images/buu.jpeg" alt="" />
+            </div>
+            <div class="item" style="--position: 10">
+              <img src="images/front.jpeg" alt="" />
+            </div>
+          </div>
+          <div id="vission-typing"></div>
+          <div class="model"></div>
+        </div>
+        <div class="content">
+          <h1>Discover the <span class="highlight">wonders</span> of space.</h1>
+          <p>
+            Experience the captivating beauty and mysteries of the cosmos on our
+            journey.
+          </p>
+          <button class="discover-btn">Discover</button>
+        </div>
+        <div class="side-content">
+          <h2>Explore the Vastness of Space</h2>
+          <p>
+            Welcome to a world of discovery, inspiration, and boundless
+            opportunities. Our mission is to immerse you in the exciting realm of
+            space exploration.
+          </p>
+          <div class="event-details">
+            <h3>November 27<sup>th</sup>, 2024</h3>
+            <p>Prague, Czech Republic</p>
+          </div>
+        </div>
+        <div class="latest-news">
+          <h2>Latest News</h2>
+          <ul>
+            <li><a href="#news1">NASA announces new Mars mission</a></li>
+            <li><a href="#news2">SpaceX successfully launches Starship</a></li>
+            <li>
+              <a href="#news3">Astronomers discover Earth-like exoplanet</a>
+            </li>
+          </ul>
+        </div>
+        <div class="upcoming-events">
+          <h2>Upcoming Events</h2>
+          <ul>
+            <li>
+              <h3>Space Tech Expo</h3>
+              <p>December 15<sup>th</sup>, 2024 - Los Angeles, USA</p>
+            </li>
+            <li>
+              <h3>Astrobiology Conference</h3>
+              <p>January 10<sup>th</sup>, 2025 - Tokyo, Japan</p>
+            </li>
+          </ul>
+        </div>
+        <div class="subscribe-section">
+          <h2>Subscribe to Our Newsletter</h2>
+          <p>
+            Stay updated with the latest news and events in space exploration.
+          </p>
+          <form action="#" method="post">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
       </div>
-    </header>
-        <style>
-
-          .navbar .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
-          }
-
-          .navbar ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-          }
-
-          .navbar ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            transition: color 0.3s ease;
-          }
-
-          .navbar ul li a:hover {
-            color: #ff9800;
-          }
-        </style>
-    </header>
-</div>
-<main class="hero-section"></main>
-<div class="banner">
-    <div class="slider" style="--quantity: 10">
-        <div class="item" style="--position: 1">
-            <img src="images/ii.jpeg" alt="" />
-        </div>
-        <div class="item" style="--position: 2">
-            <img src="images/we.jpeg" alt="" />
-        </div>
-        <div class="item" style="--position: 3">
-            <img src="images/k.jpeg" alt="" />
-        </div>
-        <div class="item" style="--position: 4">
-            <img src="images/mountain.jpeg" alt="" />
-        </div>
-        <div class="item" style="--position: 5">
-            <img src="images/we.jpeg" alt="" />
-        </div>
-        <div class="item" style="--position: 6">
-            <img src="images/ss.jpg" alt="" />
-        </div>
-        <div class="item" style="--position: 7">
-          <img src="images/space.jpg" alt="" />
-        </div>
-        <div class="item" style="--position: 8">
-          <img src="images/sate.jpg" alt="" />
-        </div>
-        <div class="item" style="--position: 9">
-          <img src="images/buu.jpeg" alt="" />
-        </div>
-        <div class="item" style="--position: 10">
-          <img src="images/front.jpeg" alt="" />
-        </div>
-      </div>
-      <div class="model">
-      </div>
-    </div>
-      <div class="content">
-        <h1>Discover the <span class="highlight">wonders</span> of space.</h1>
-        <p>
-          Experience the captivating beauty and mysteries of the cosmos on our
-          journey.
-        </p>
-        <button class="discover-btn">Discover</button>
-      </div>
-      <div class="side-content">
-        <h2>Explore the Vastness of Space</h2>
-        <p>
-          Welcome to a world of discovery, inspiration, and boundless
-          opportunities. Our mission is to immerse you in the exciting realm of
-          space exploration.
-        </p>
-        <div class="event-details">
-          <h3>November 27<sup>th</sup>, 2024</h3>
-          <p>Prague, Czech Republic</p>
-        </div>
-      </div>
-
-      <div class="latest-news">
-        <h2>Latest News</h2>
-        <ul>
-          <li><a href="#news1">NASA announces new Mars mission</a></li>
-          <li><a href="#news2">SpaceX successfully launches Starship</a></li>
-          <li>
-            <a href="#news3">Astronomers discover Earth-like exoplanet</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="upcoming-events">
-        <h2>Upcoming Events</h2>
-        <ul>
-          <li>
-            <h3>Space Tech Expo</h3>
-            <p>December 15<sup>th</sup>, 2024 - Los Angeles, USA</p>
-          </li>
-          <li>
-            <h3>Astrobiology Conference</h3>
-            <p>January 10<sup>th</sup>, 2025 - Tokyo, Japan</p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="subscribe-section">
-        <h2>Subscribe to Our Newsletter</h2>
-        <p>
-          Stay updated with the latest news and events in space exploration.
-        </p>
-        <form action="#" method="post">
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          />
-          <button type="submit">Subscribe</button>
-        </form>
     </main>
+    <div class="stars-bg"></div>
+    
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const vissionEl = document.getElementById('vission-typing');
+    const mainTitle = 'SPACE';
+    const subtitle = 'Where curiosity reaches beyond Earth,\nand astronomy opens windows to the universe.';
+    let typing = false;
 
-    <footer>
-      <p class="footer-title">Expand Your Horizons</p>
-      <p>
-        Become part of the history of space exploration. Journey through star
-        systems and discover new worlds. Our team is here to help you fulfill
-        your dream of cosmic adventures.
-      </p>
-      <a href="#read-more" class="read-more-link">Read More</a>
-    </footer>
+    function typeLines(main, sub, cb) {
+        vissionEl.innerHTML = '<span class="main-title"></span><span class="subtitle"></span>';
+        const mainSpan = vissionEl.querySelector('.main-title');
+        const subSpan = vissionEl.querySelector('.subtitle');
+        let i = 0, j = 0;
+
+        function typeMain() {
+            if (i <= main.length) {
+                mainSpan.textContent = main.slice(0, i);
+                i++;
+                setTimeout(typeMain, 100);
+            } else {
+                setTimeout(typeSub, 300);
+            }
+        }
+        function typeSub() {
+            if (j <= sub.length) {
+                subSpan.textContent = sub.slice(0, j);
+                j++;
+                setTimeout(typeSub, 40);
+            } else if (cb) {
+                cb();
+            }
+        }
+        typeMain();
+    }
+
+    function showVission(percent) {
+        if (percent >= 0.15 && percent <= 0.9) {
+            if (!typing) {
+                typing = true;
+                vissionEl.style.opacity = 1;
+                typeLines(mainTitle, subtitle, null);
+            }
+        } else {
+            typing = false;
+            vissionEl.style.opacity = 0;
+            vissionEl.innerHTML = '';
+        }
+    }
+
+    // Animation duration should match your CSS animation duration
+    const duration = 40000; // 40s for your autoRun animation
+    function updateVission() {
+        const now = performance.now();
+        const percent = ((now % duration) / duration);
+        showVission(percent);
+        requestAnimationFrame(updateVission);
+    }
+    updateVission();
+
+    // Starfield effect
+    const starContainer = document.querySelector('.stars-bg');
+    const starCount = 350; // Number of stars
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        const size = Math.random() * 2 + 1;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.top = `${Math.random() * 100}vh`;
+        star.style.left = `${Math.random() * 100}vw`;
+        star.style.opacity = Math.random() * 0.6 + 0.2;
+        star.style.animationDuration = `${1.5 + Math.random() * 2}s`;
+        starContainer.appendChild(star);
+    }
+});
+</script>
+<footer>
+    <p class="footer-title">Expand Your Horizons</p>
+    <p>
+      Become part of the history of space exploration. Journey through star
+      systems and discover new worlds. Our team is here to help you fulfill
+      your dream of cosmic adventures.
+    </p>
+    <a href="#read-more" class="read-more-link">Read More</a>
+  </footer>
   </body>
 </html>
-
-

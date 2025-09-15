@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .navbar {
+        font-family: "Bank Gothic";
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(4px);
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: #ffffff;
+      }
+
+      .navbar nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar nav ul li {
+        margin: 0 15px;
+      }
+
+      .navbar nav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .navbar nav ul li a:hover {
+        color: #00bcd4;
+      }
+
+      .get-tickets {
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #000;
+        background: #00bcd4;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .get-tickets:hover {
+        background: #008c9e;
+      }
+      .navbar .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+      }
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+      .navbar ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      .navbar ul li a:hover {
+        color: #ff9800;
+      }
+    </style>
+    <header
+      class="navbar"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+      "
+    >
+      <div class="logo" style="flex: 1; text-align: left">SPACE</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="series.html">Blog</a></li>
+          <li><a href="char.html">Characters</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="flex: 1; text-align: right">
+        <button class="get-tickets">Get Tickets</button>
+      </div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerospace News</title>
+    <link rel="stylesheet" href="series.css">
+</head>
+<body>
+    <header id="site-header"></header>
+    <script>
+      // Dynamically load header.html into the #site-header element
+      fetch('../header.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('site-header').innerHTML = html;
+      })
+      .catch(err => {
+        document.getElementById('site-header').innerHTML = '<nav class="navbar"><span class="logo">Aerospace Blog</span></nav>';
+      });
+    </script>
+    <section>
+        <form id="news-search-form" style="margin-bottom: 24px; text-align:center;">
+            <input type="text" id="news-search-input" placeholder="Search by keyword or date (DD-MM-YYYY)" style="padding:8px; width: 260px; border-radius:4px; border:1px solid #ccc;">
+            <button type="submit" style="padding:8px 16px; border-radius:4px; border:none; background:#00bcd4; color:#fff; font-weight:bold; cursor:pointer;">Search</button>
+        </form>
+        <div id="wikipedia-news"></div>
+        <div id="google-news"></div>
+    </section>
+    <script src="series.js"></script>
+</body>
+</html>

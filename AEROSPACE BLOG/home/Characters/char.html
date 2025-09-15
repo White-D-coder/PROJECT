@@ -2,147 +2,310 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Space & Aerospace Opportunities</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="char.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #0a192f;
+            color: #e6f1ff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #112240;
+            padding: 2rem 1rem 1rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 8px #0003;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: #64ffda;
+        }
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0 1rem 0;
+        }
+        .controls select {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            border: none;
+            background: #233554;
+            color: #64ffda;
+            font-size: 1rem;
+        }
+        .opportunity-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .card {
+            background: #112240;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px #0005;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+        .card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 32px #0007;
+        }
+        .card .title {
+            font-size: 1.3rem;
+            color: #64ffda;
+            font-weight: bold;
+        }
+        .card .org {
+            color: #8892b0;
+            font-size: 1rem;
+        }
+        .card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .card .tag {
+            background: #233554;
+            color: #64ffda;
+            border-radius: 4px;
+            padding: 0.2rem 0.7rem;
+            font-size: 0.9rem;
+        }
+        .card .desc {
+            color: #ccd6f6;
+            font-size: 1rem;
+        }
+        .card .date {
+            font-size: 0.95rem;
+            color: #7fffd4;
+        }
+        .card .link {
+            margin-top: auto;
+            text-align: right;
+        }
+        .card .link a {
+            color: #64ffda;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .card .link a:hover {
+            color: #7fffd4;
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .opportunity-list {
+                padding: 1rem;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <div class="card">
-            <h2>Space Stations</h2>
-            <p>Space stations are habitable artificial satellites that serve as research laboratories and living quarters for astronauts.</p>
-            <ul>
-                <li>International Space Station (ISS)</li>
-                <li>Tiangong Space Station - China</li>
-                <li>Mir Space Station - Russia</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Space Debris</h2>
-            <p>Space debris consists of defunct satellites, spent rocket stages, and fragments from collisions in Earth's orbit.</p>
-            <ul>
-                <li>Orbital Debris Mitigation</li>
-                <li>Active Debris Removal</li>
-                <li>Space Traffic Management</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Space Law</h2>
-            <p>Space law governs activities in outer space, ensuring peaceful exploration and preventing conflicts.</p>
-            <ul>
-                <li>Outer Space Treaty</li>
-                <li>Moon Agreement</li>
-                <li>Liability Convention</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Space Medicine</h2>
-            <p>Space medicine focuses on the health and well-being of astronauts during space missions.</p>
-            <ul>
-                <li>Microgravity Effects</li>
-                <li>Radiation Protection</li>
-                <li>Psychological Challenges</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Space Robotics</h2>
-            <p>Space robotics involves the development of robots for tasks such as satellite servicing and planetary exploration.</p>
-            <ul>
-                <li>Robotic Arms - Canadarm2</li>
-                <li>Rovers - Perseverance, Spirit, Opportunity</li>
-                <li>Autonomous Drones</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Exoplanet Exploration</h2>
-            <p>Exoplanet exploration aims to discover and study planets outside our solar system.</p>
-            <ul>
-                <li>Kepler Space Telescope</li>
-                <li>TESS - Transiting Exoplanet Survey Satellite</li>
-                <li>James Webb Space Telescope</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Space Tourism Companies</h2>
-            <p>Private companies are pioneering space tourism, making space accessible to civilians.</p>
-            <ul>
-                <li>Blue Origin - New Shepard</li>
-                <li>Virgin Galactic - SpaceShipTwo</li>
-                <li>SpaceX - Starship</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Space Art and Culture</h2>
-            <p>Space has inspired art, literature, and culture, shaping humanity's imagination and creativity.</p>
-            <ul>
-                <li>Science Fiction Movies</li>
-                <li>Space-themed Art</li>
-                <li>Music Inspired by Space</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Space Weather</h2>
-            <p>Space weather refers to the environmental conditions in space, influenced by solar activity.</p>
-            <ul>
-                <li>Solar Flares</li>
-                <li>Geomagnetic Storms</li>
-                <li>Cosmic Rays</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Space Farming</h2>
-            <p>Space farming explores growing food in space to support long-term missions and colonization.</p>
-            <ul>
-                <li>Hydroponics</li>
-                <li>Microgravity Plant Growth</li>
-                <li>Closed-loop Ecosystems</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Space Exploration History</h2>
-            <p>Space exploration has a rich history, from the first human in space to Mars rovers and beyond.</p>
-            <ul>
-                <li>Vostok 1 - Yuri Gagarin</li>
-                <li>Apollo 11 - Moon Landing</li>
-                <li>Voyager Probes - Interstellar Space</li>
-            </ul>
-            </div>
-        <div class="card">
-            <h2>Space Communication</h2>
-            <p>Space communication enables data transmission between spacecraft and Earth.</p>
-            <ul>
-                <li>Deep Space Network</li>
-                <li>Satellite Communication</li>
-                <li>Laser Communication</li>
-            </ul>
-            </div>
-        <div class="card">
-            <h2>Space Ethics</h2>
-            <p>Space ethics addresses moral and ethical considerations in space exploration and utilization.</p>
-            <ul>
-                <li>Planetary Protection</li>
-                <li>Resource Utilization</li>
-                <li>Space Colonization Ethics</li>
-            </ul>
-            </div>
-        <div class="card">
-            <h2>Space Education and Outreach</h2>
-            <p>Space education and outreach programs inspire the next generation of scientists and engineers.</p>
-            <ul>
-                <li>STEM Programs</li>
-                <li>Public Engagement Initiatives</li>
-                <li>Space Camps</li>
-            </ul>  
-            </div>
-        </div>
-    </section>
-    <footer>
-        <p>© 2024 Space Exploration. All rights reserved.</p>
-        <p>Follow us on social media: 
-            <a href="#">Twitter</a> | 
-            <a href="#">Facebook</a> | 
-            <a href="#">Instagram</a>
-        </p>    
+    <header>
+        <h1>Space & Aerospace Opportunities</h1>
+        <p>Hackathons, Internships, Projects, Tours, Competitions & More (including Drones)</p>
+    </header>
+    <div class="controls">
+        <select id="sortType">
+            <option value="upcoming">Upcoming</option>
+            <option value="live">Live</option>
+            <option value="paid">Paid</option>
+            <option value="free">Free</option>
+        </select>
+        <select id="categoryType">
+            <option value="all">All Categories</option>
+            <option value="hackathon">Hackathon</option>
+            <option value="internship">Internship</option>
+            <option value="project">Project</option>
+            <option value="tour">Tour</option>
+            <option value="competition">Competition</option>
+            <option value="drone">Drone</option>
+        </select>
+    </div>
+    <div class="opportunity-list" id="opportunityList">
+        <!-- Cards will be injected here -->
+    </div>
+    <script>
+        // Fetch opportunities from real API using provided API key
+        let opportunities = [];
+        async function fetchOpportunities() {
+            try {
+            const response = await fetch('AIzaSyCbktb2P0U6YN4_k5gmUVhXVTpfhdFR3fY', {
+                headers: {
+                'Authorization': 'AIzaSyCbktb2P0U6YN4_k5gmUVhXVTpfhdFR3fY'
+                }
+            });
+            if (!response.ok) throw new Error('Network response was not ok');
+            opportunities = await response.json();
+            } catch (e) {
+            // Fallback to static data if API fails
+            opportunities = [
+                {
+                title: "NASA Space Apps Challenge 2024",
+                org: "NASA",
+                desc: "Global hackathon for space and Earth science enthusiasts. Collaborate, innovate, and solve real-world problems.",
+                date: "2024-10-05",
+                status: "upcoming",
+                paid: false,
+                category: ["hackathon", "space"],
+                link: "https://www.spaceappschallenge.org/",
+                tags: ["Hackathon", "Space", "Free"]
+                },
+                {
+                title: "ISRO Young Scientist Internship",
+                org: "ISRO",
+                desc: "Internship for students interested in space technology, satellite systems, and aerospace engineering.",
+                date: "2024-07-01",
+                status: "upcoming",
+                paid: true,
+                category: ["internship", "space"],
+                link: "https://www.isro.gov.in/InternshipAndProjects.html",
+                tags: ["Internship", "Space", "Paid"]
+                },
+                {
+                title: "ESA Open Source Satellite Project",
+                org: "European Space Agency",
+                desc: "Contribute to open source satellite software and hardware projects. Remote and collaborative.",
+                date: "Ongoing",
+                status: "live",
+                paid: false,
+                category: ["project", "open source", "space"],
+                link: "https://www.esa.int/",
+                tags: ["Project", "Open Source", "Space", "Free"]
+                },
+                {
+                title: "SpaceX Starbase Tour",
+                org: "SpaceX",
+                desc: "Guided tour of SpaceX Starbase, Texas. Explore rocket assembly, launch pads, and more.",
+                date: "2024-08-15",
+                status: "upcoming",
+                paid: true,
+                category: ["tour", "space"],
+                link: "https://www.spacex.com/",
+                tags: ["Tour", "Space", "Paid"]
+                },
+                {
+                title: "AIAA Drone Design Competition",
+                org: "AIAA",
+                desc: "Design and build drones for aerospace applications. Compete with teams worldwide.",
+                date: "2024-09-10",
+                status: "upcoming",
+                paid: false,
+                category: ["competition", "drone", "aerospace"],
+                link: "https://www.aiaa.org/",
+                tags: ["Competition", "Drone", "Aerospace", "Free"]
+                },
+                {
+                title: "Open Cosmos Paid Internship",
+                org: "Open Cosmos",
+                desc: "Paid internship in satellite mission design and operations. Work with leading aerospace engineers.",
+                date: "2024-06-20",
+                status: "upcoming",
+                paid: true,
+                category: ["internship", "space"],
+                link: "https://open-cosmos.com/",
+                tags: ["Internship", "Space", "Paid"]
+                },
+                {
+                title: "Drone Space Mapping Project",
+                org: "DroneSpace",
+                desc: "Open source project for mapping space debris using drones and AI. Join the global team.",
+                date: "Ongoing",
+                status: "live",
+                paid: false,
+                category: ["project", "drone", "space", "open source"],
+                link: "https://dronespacemapping.org/",
+                tags: ["Project", "Drone", "Space", "Open Source", "Free"]
+                },
+                {
+                title: "Blue Origin Aerospace Competition",
+                org: "Blue Origin",
+                desc: "Annual competition for innovative aerospace solutions. Cash prizes for top teams.",
+                date: "2024-11-01",
+                status: "upcoming",
+                paid: true,
+                category: ["competition", "aerospace"],
+                link: "https://www.blueorigin.com/",
+                tags: ["Competition", "Aerospace", "Paid"]
+                }
+            ];
+            }
+        }
+        // Fetch data and then render
+        fetchOpportunities().then(() => filterAndSort());
+        
+
+        function formatDate(dateStr) {
+            if (dateStr === "Ongoing") return "Ongoing";
+            const d = new Date(dateStr);
+            return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+        }
+
+        function renderOpportunities(list) {
+            const container = document.getElementById('opportunityList');
+            container.innerHTML = '';
+            if (list.length === 0) {
+                container.innerHTML = '<p style="color:#64ffda;text-align:center;">No opportunities found.</p>';
+                return;
+            }
+            list.forEach(item => {
+                container.innerHTML += `
+                    <div class="card">
+                        <div class="title">${item.title}</div>
+                        <div class="org">${item.org}</div>
+                        <div class="tags">
+                            ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                        <div class="desc">${item.desc}</div>
+                        <div class="date"><b>Date:</b> ${formatDate(item.date)} | <b>Status:</b> ${item.status.charAt(0).toUpperCase() + item.status.slice(1)}</div>
+                        <div class="link"><a href="${item.link}" target="_blank" rel="noopener">View Details</a></div>
+                    </div>
+                `;
+            });
+        }
+
+        function filterAndSort() {
+            const sortType = document.getElementById('sortType').value;
+            const categoryType = document.getElementById('categoryType').value;
+            let filtered = opportunities.slice();
+
+            // Filter by category
+            if (categoryType !== 'all') {
+                filtered = filtered.filter(item => item.category.includes(categoryType));
+            }
+
+            // Filter/sort by sortType
+            if (sortType === 'upcoming') {
+                filtered = filtered.filter(item => item.status === 'upcoming')
+                    .sort((a, b) => new Date(a.date) - new Date(b.date));
+            } else if (sortType === 'live') {
+                filtered = filtered.filter(item => item.status === 'live');
+            } else if (sortType === 'paid') {
+                filtered = filtered.filter(item => item.paid);
+            } else if (sortType === 'free') {
+                filtered = filtered.filter(item => !item.paid);
+            }
+
+            renderOpportunities(filtered);
+        }
+
+        document.getElementById('sortType').addEventListener('change', filterAndSort);
+        document.getElementById('categoryType').addEventListener('change', filterAndSort);
+
+        // Initial render
+        filterAndSort();
+    </script>
 </body>
 </html>
