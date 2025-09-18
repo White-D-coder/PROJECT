@@ -175,6 +175,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const vissionEl = document.getElementById('vission-typing');
     const mainTitle = 'SPACE';
     const subtitle = 'Where curiosity reaches beyond Earth,\nand astronomy opens windows to the universe.';
+    // Apply 'Poiret One' font to the main title and subtitle after typing
+    const poiretFontLink = document.createElement('link');
+    poiretFontLink.rel = 'stylesheet';
+    poiretFontLink.href = 'https://fonts.googleapis.com/css2?family=Poiret+One&display=swap';
+    document.head.appendChild(poiretFontLink);
+
+    // Add style for Poiret One font to vission-typing
+    const poiretStyle = document.createElement('style');
+    poiretStyle.textContent = `
+      #vission-typing .subtitle {
+      font-family: 'Poiret One', cursive, sans-serif !important;
+      letter-spacing: 0.05em;
+      }
+    `;
+    document.head.appendChild(poiretStyle);
     let typing = false;
 
     function typeLines(main, sub, cb) {
@@ -245,14 +260,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 </script>
-<footer>
-    <p class="footer-title">Expand Your Horizons</p>
-    <p>
-      Become part of the history of space exploration. Journey through star
-      systems and discover new worlds. Our team is here to help you fulfill
-      your dream of cosmic adventures.
-    </p>
-    <a href="#read-more" class="read-more-link">Read More</a>
-  </footer>
-  </body>
+<footer id="site-footer"></footer>
+<script>
+  // Dynamically load footer.html into the #site-footer element
+  fetch('./footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('site-footer').innerHTML = html;
+    })
+    .catch(err => {
+      document.getElementById('site-footer').innerHTML = '<div style="color:white;text-align:center;padding:1em 0;">Aerospace Blog &copy; 2024</div>';
+    });
+</script>
+</body>
 </html>
